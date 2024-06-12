@@ -1,0 +1,50 @@
+header {
+  margin-bottom: 2rem;
+  height: 5.875rem;
+  background-color: var(--grey7);
+}
+
+.logo {
+  width: 176.49px;
+  height: 54px;
+}
+
+nav {
+  li {
+    gap: 1.875rem;
+  }
+  a {
+    color: var(--grey1);
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.3s;
+  }
+}
+
+nav a:hover {
+  color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+form {
+  input {
+    width: 15rem;
+    height: 2.375rem;
+    background-color: var(--grey7);
+    border: none;
+    border-bottom: solid 1px var(--grey1);
+  }
+  button {
+    width: 36.56px;
+    height: 34.11px;
+    border: none;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 0.875rem;
+  }
+}
+
+.gap-nav-right {
+  gap: 1rem;
+}
