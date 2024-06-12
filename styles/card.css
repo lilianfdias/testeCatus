@@ -1,0 +1,118 @@
+.ul-card {
+  width: 100%;
+  li {
+    width: 100%;
+  }
+}
+
+.card {
+  width: 17.5rem;
+  height: 31.938rem;
+  padding: 15px 10px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: 0.3;
+
+  img {
+    width: 16.25rem;
+    height: 16.25rem;
+
+    &:hover {
+      transform: scaleX(-1);
+    }
+  }
+  p {
+    font-weight: 400;
+    size: 1rem;
+    color: var(--grey3);
+    max-height: 3rem;
+    overflow: hidden;
+    line-height: 1rem;
+  }
+  button {
+    height: 3.125rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--grey1);
+    background-color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.card button:hover {
+  color: var(--grey7);
+  background-color: var(--color-secondary);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-off {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  span:first-child {
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+  span:last-child {
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+}
+
+.card-off-position {
+  position: relative;
+}
+
+.card-price {
+  gap: 0.5rem;
+  span:nth-of-type(1) {
+    font-weight: 300;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+    text-decoration-color: var(--grey5);
+    text-decoration-thickness: 2px;
+  }
+  span:nth-of-type(2) {
+    font-weight: 700;
+    font-size: 1.5;
+  }
+
+  div {
+    span:nth-of-type(1) {
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    span:nth-of-type(2) {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+    span:nth-of-type(3) {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    span:nth-of-type(4) {
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+}
