@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles/card.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/button.css" />
+    <script type="module" defer src="./scripts/index.js"></script>
 
     <link rel="stylesheet" href="./styles/positioning.css" />
   </head>
@@ -26,22 +27,33 @@
     <header class="header display-flex align-items-center">
       <div class="container display-flex align-items-center justify-between">
         <img class="logo" src="./img/nav/logo.svg" alt="" />
-        <nav>
-          <ul>
-            <li class="display-flex">
-              <a href="">Loja</a>
-              <a href="">Login</a>
-              <a href="">Sobre</a>
-              <a href="">Contato </a>
-            </li>
-          </ul>
-        </nav>
+        <img class="logo-peq" src="./img/nav/logoImg.svg" alt="" />
+
+        <div>
+          <div>
+            <nav>
+              <ul>
+                <li class="display-flex">
+                  <a href="">Loja</a>
+                  <a href="">Login</a>
+                  <a href="">Sobre</a>
+                  <a href="">Contato </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
         <div class="display-flex align-items-center gap-nav-right">
-          <form class="display-flex align-items-center">
-            <input placeholder="Digite aqui sua busca " />
-            <button><img src="./img/nav/Union.svg" alt="" /></button>
+          <form class="display-flex align-items-center" id="busca">
+            <input placeholder="Digite aqui sua busca " id="input" />
+            <button type="submit">
+              <img src="./img/nav/Union.svg" alt="" />
+            </button>
           </form>
-          <img src="./img/nav/cart.svg" alt="" />
+          <span class="burguer-menu">
+            <img src="./img/nav/burguerIcon.svg" alt="" />
+          </span>
+          <img class="cart" src="./img/nav/cart.svg" alt="" />
         </div>
       </div>
     </header>
@@ -50,19 +62,33 @@
         class="container display-flex banner justify-between margim-botton-sections"
       >
         <div class="banner display-flex flex-direction-column">
-          <img src="./img/banner/banner 01.png" alt="berço" />
-          <img src="./img/banner/banner 02.png" alt="mãe e bebê" />
+          <img
+            class="image-size image-little"
+            src="./img/banner/banner 01.png"
+            alt="berço"
+          />
+          <img
+            class="image-size image-little"
+            src="./img/banner/banner 02.png"
+            alt="mãe e bebê"
+          />
         </div>
         <img
+          class="image-big-banner"
           src="./img/banner/banner 03.png "
           alt="mãe brincando com bebe no carrinho"
         />
         <div class="display-flex banner flex-direction-column">
           <img
+            class="image-size image-little"
             src="./img/banner/banner 04.png"
             alt="mãe olhando roupinha de bebê"
           />
-          <img src="./img/banner/banner 05.png" alt="casal com bebê" />
+          <img
+            class="image-size image-little"
+            src="./img/banner/banner 05.png"
+            alt="casal com bebê"
+          />
         </div>
       </section>
       <section
@@ -78,43 +104,11 @@
           </div>
         </div>
         <div class="display-flex gap-section2">
-          <button class="btn-slider">
+          <button class="btn-slider" id="prev">
             <img src="./img/products/previus.svg" alt="" />
           </button>
-          <ul class="ul-card" id="cardsProducts">
-            <li>
-              <div class="card">
-                <div class="card-off-position">
-                  <img
-                    src="./img/products/cadeira.png"
-                    alt="cadeira vermelha"
-                  />
-                  <div class="card-off">
-                    <span>15%</span>
-                    <span>off</span>
-                  </div>
-                </div>
-                <div class="display-flex gap-section2 flex-direction-column">
-                  <p>
-                    Aliquam congue nisl ele ac ligula convallis, luctus blandit
-                    augue. Aliquam congue nisl ele ac ligula convallis, luctus
-                    blandit augue. Aliquam congue nisl ele ac ligula convallis,
-                    luctus blandit augue.
-                  </p>
-                  <div class="display-flex flex-direction-column card-price">
-                    <span class="span1">de R$ 582,90</span>
-                    <span>R$ 238,41</span>
-                    <div>
-                      <span>5x</span><span>de</span> <span>R$ 47,68</span>
-                      <span>sem juros</span>
-                    </div>
-                  </div>
-                </div>
-                <button>Adicionar ao carrinho</button>
-              </div>
-            </li>
-          </ul>
-          <button class="btn-slider">
+          <ul class="ul-card" id="cardsProducts"></ul>
+          <button class="btn-slider" id="next">
             <img src="./img/products/next.svg" alt="" />
           </button>
         </div>
@@ -122,9 +116,11 @@
     </main>
     <footer class="footer display-flex justify-between align-items-center">
       <div
-        class="container display-flex align=itens-flex-start justify-between"
+        class="container div-conteudo column display-flex align=itens-flex-start justify-between"
       >
-        <div class="display-flex flex-direction-column gap-section2">
+        <div
+          class="div-conteudo display-flex flex-direction-column gap-section2"
+        >
           <div class="display-flex flex-direction-column">
             <h2>Central de atendimento</h2>
             <div class="display-flex flex-direction-column">
@@ -152,9 +148,14 @@
               <hr class="brand-line-section" />
             </div>
           </div>
-          <div class="display-flex gap3">
-            <img src="./img/footer/seloGoogle.svg" alt="selo proteção google" />
+          <div class="display-flex gap3 div-selos">
             <img
+              class="image-selo"
+              src="./img/footer/seloGoogle.svg"
+              alt="selo proteção google"
+            />
+            <img
+              class="image-selo"
               src="./img/footer/selo_lojaprotegida.svg "
               alt="selo loja protegida"
             />

@@ -9,6 +9,10 @@ header {
   height: 54px;
 }
 
+.logo-peq {
+  display: none;
+}
+
 nav {
   li {
     gap: 1.875rem;
@@ -24,6 +28,10 @@ nav {
 nav a:hover {
   color: var(--color-secondary);
   transition: 0.3s;
+}
+
+.burguer-menu {
+  display: none;
 }
 
 form {
@@ -47,4 +55,53 @@ form {
 
 .gap-nav-right {
   gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .cart {
+    display: none;
+  }
+
+  .logo-peq {
+    display: block;
+  }
+  .burguer-menu {
+    display: flex;
+    height: 43px;
+    width: 30px;
+  }
+  .burguer-menu img {
+    width: 30px;
+  }
+
+  form {
+    button {
+      width: 20px;
+      height: 20px;
+      border: none;
+    }
+    button img {
+      width: 25px;
+    }
+
+    ::-webkit-input-placeholder {
+      font-size: 0.625rem;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  form {
+    input {
+      width: 10rem;
+    }
+  }
 }

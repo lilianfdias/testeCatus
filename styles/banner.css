@@ -1,3 +1,25 @@
 .banner {
   gap: 2rem;
 }
+
+@media (max-width: 1500px) {
+  .image-big-banner {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .image-big-banner {
+    display: inline;
+    width: inherit;
+  }
+  .image-little {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .image-big-banner {
+    width: 18rem;
+  }
+}
