@@ -23,3 +23,19 @@
     color: var(--grey7);
   }
 }
+
+@media (max-width: 900px) {
+  .column {
+    flex-direction: column;
+  }
+  .footer {
+    height: unset;
+    padding: 1rem 0 1rem 0;
+  }
+  .div-conteudo {
+    gap: 2rem;
+  }
+  .image-selo {
+    width: 30%;
+  }
+}

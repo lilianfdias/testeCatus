@@ -1,11 +1,16 @@
 .ul-card {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  gap: 1rem;
   width: 100%;
+  justify-content: space-between;
   li {
-    width: 100%;
+    min-width: 17.5rem;
   }
 }
 
-.card {
+.ul-card .card {
   width: 17.5rem;
   height: 31.938rem;
   padding: 15px 10px 15px 10px;
@@ -29,6 +34,7 @@
     max-height: 3rem;
     overflow: hidden;
     line-height: 1rem;
+    height: 3rem;
   }
   button {
     height: 3.125rem;
